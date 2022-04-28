@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerbindungen));
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtptime = new System.Windows.Forms.DateTimePicker();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.tbxTime = new System.Windows.Forms.TextBox();
             this.dtpVerbindungen = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cboEndstation = new System.Windows.Forms.ComboBox();
@@ -69,14 +69,24 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.dtptime);
             this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Controls.Add(this.tbxTime);
             this.panel1.Controls.Add(this.dtpVerbindungen);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(82, 120);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(615, 327);
             this.panel1.TabIndex = 1;
+            // 
+            // dtptime
+            // 
+            this.dtptime.CustomFormat = "HH:mm";
+            this.dtptime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtptime.Location = new System.Drawing.Point(351, 185);
+            this.dtptime.Name = "dtptime";
+            this.dtptime.ShowUpDown = true;
+            this.dtptime.Size = new System.Drawing.Size(200, 23);
+            this.dtptime.TabIndex = 5;
             // 
             // btnSearch
             // 
@@ -87,13 +97,6 @@
             this.btnSearch.Text = "Suchen";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // tbxTime
-            // 
-            this.tbxTime.Location = new System.Drawing.Point(441, 188);
-            this.tbxTime.Name = "tbxTime";
-            this.tbxTime.Size = new System.Drawing.Size(100, 23);
-            this.tbxTime.TabIndex = 3;
             // 
             // dtpVerbindungen
             // 
@@ -180,6 +183,7 @@
             this.ColumnDuration});
             this.dgvConnectionList.Location = new System.Drawing.Point(-2, 495);
             this.dgvConnectionList.Name = "dgvConnectionList";
+            this.dgvConnectionList.RowHeadersVisible = false;
             this.dgvConnectionList.RowTemplate.Height = 25;
             this.dgvConnectionList.Size = new System.Drawing.Size(800, 423);
             this.dgvConnectionList.TabIndex = 9;
@@ -261,7 +265,6 @@
             this.Text = "Verbindungen";
             this.Load += new System.EventHandler(this.FormVerbindungen_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConnectionList)).EndInit();
@@ -277,7 +280,6 @@
         private DateTimePicker dtpVerbindungen;
         private Panel panel2;
         private Button btnReverse;
-        private TextBox tbxTime;
         private Label lblIcon;
         private PictureBox picIcon;
         private DataGridView dgvConnectionList;
@@ -293,5 +295,6 @@
         private DataGridViewTextBoxColumn ColumnDuration;
         private ComboBox cboEndstation;
         private ComboBox cboStartstation;
+        private DateTimePicker dtptime;
     }
 }

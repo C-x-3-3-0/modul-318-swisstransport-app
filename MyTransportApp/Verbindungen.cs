@@ -22,7 +22,7 @@ namespace MyTransportApp
 
         private void FormVerbindungen_Load(object sender, EventArgs e)
         {
-            tbxTime.Text = DateTime.Now.ToString("HH:mm");
+           
 
         }
         private void btnReverse_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace MyTransportApp
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dgvConnectionList.Rows.Clear();
-            var List = transport.GetConnections(cboStartstation.Text, cboEndstation.Text);
+            var List = transport.GetConnections(cboStartstation.Text, cboEndstation.Text, dtpVerbindungen.Value , dtptime.Value);
             foreach (Connection connection in List.ConnectionList)
             {
                 
