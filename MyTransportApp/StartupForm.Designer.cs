@@ -61,6 +61,7 @@
             this.btnAbfahrtstafel.TabIndex = 9;
             this.btnAbfahrtstafel.Text = "Abfahrtstafel";
             this.btnAbfahrtstafel.UseVisualStyleBackColor = true;
+            this.btnAbfahrtstafel.Click += new System.EventHandler(this.btnAbfahrtstafel_Click);
             // 
             // btnStationen
             // 
@@ -81,6 +82,7 @@
             this.btnVerbindungen.TabIndex = 7;
             this.btnVerbindungen.Text = "Verbindungen";
             this.btnVerbindungen.UseVisualStyleBackColor = true;
+            this.btnVerbindungen.Click += new System.EventHandler(this.btnVerbindungen_Click);
             // 
             // lblIcon
             // 
@@ -99,7 +101,7 @@
             this.picIcon.Image = global::MyTransportApp.Properties.Resources.icon_removebg_preview;
             this.picIcon.Location = new System.Drawing.Point(12, 16);
             this.picIcon.Name = "picIcon";
-            this.picIcon.Size = new System.Drawing.Size(97, 60);
+            this.picIcon.Size = new System.Drawing.Size(99, 53);
             this.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picIcon.TabIndex = 5;
             this.picIcon.TabStop = false;

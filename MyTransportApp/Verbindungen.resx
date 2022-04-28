@@ -58,6 +58,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnReverse.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsMAAALDAE/QCLIAAAAB3RJ
+        TUUH5gQcAxMDGSayqQAAA3hJREFUaEPtmMmrj2EUx6+pKDMLyjxkRcbMFlKGZENILJCSDDtZ+A9kgSSh
+        bCULMhfFSkRCWJChWJjnIePns3hub+9933t/w/P7+d2f+61P6Xp/7/Oc95zzPOechjb95+oCy2EzDPQP
+        rVUa8QX+wDkYBq1SekIjAuehVRozAPREXRjjpt18mzG1JjddN2E2GE5DTRjTAXqCi4+HaTC9QKbCKngM
+        /8SYjjAK1sFhuApP4TW8hw9F4PPfIWmInIBeUBF1gplwENz4L0hvIBavQA9H1wjYC371rIV/wzf4CH7l
+        QnkHWR45DlE9Yg4sgluQXuwtXIIdsBrmgh4zTwphMqyEdI54mg2FaDKUNoBuTi70DHaBCdsNStUQOAPJ
+        d0c3Qk9YG5mQYRFD4AhMBP+/HHkqpS/F6EaoFWDohEX891boCuWqakZMgIcQFjG0zIFyvaBiGNEZDPtm
+        Zcwfg7DIZ9gI7aFc2Uy56XKMmAPmlVeA1XSuDKmvEBbyyPULxFC6HynFE6cg/H4TZMpS4yKEB29DzFJh
+        GYQO8SwUmxPeK9cg7G87ZGoBGEo+5K2da3GJsmfXGN9bSs/eH+5BMCR3f4ZReMgfDIJa0hh4Ae7vByyG
+        JuoLNyAYsgdqTXpTA9yfpZKnaxN5yb2BYO1SqCW1g2TEXIc+0ERLIFir+0ZDLckm7D4EQ3IjJnk03oV+
+        UKzMqS3g/MrEjinfG9oGD6T5kCmPsmCIjVKxJfRwCDe2R6zxHEu2EHcg7O8C9IBMJT1yEoq5BJNGBGId
+        3e5jH4T3+pH0eK687g+AN+ds/1CgsmonL7tmy4cCZVnkBw6XqByFFgtXC7FiPJFXAMaoBpwLrIVkR/oA
+        xkFUVdIIC9dtkGwjvBqaDalSVCkjbBMmgeGT7ONt7sy5GG1Eo7KMcMjmOV+qusMM8G54Dsl3e6ethxb7
+        j2KUZYSDAwcIUyA9gMtjFswDc2AnXAanKcn3yk1YCDF6oUb1Bodm6cUMATeRHLq1xCfwd46Q0u+Tl7Ab
+        PNajywItb6YVg5+gd/eDo6KooZRUnkccyumRrOFbHj7vHOAJXIFDsAZGgsduxZWVI4/AHHHYlh7A5WE+
+        jQXnWpYaUXOgUFXi1PpnyjIm1mVYddWdMW6+bo2JVf1WXVnGxB4lVU1JY2xFa214UZQcuukJjYjds7ep
+        Famh4S870L33Gcu33wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="ColumnFrom.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnTo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnDeparture.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnArrival.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnArrivalPlatform.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnDuration.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIAD8BwAAZgAAAICAAAABACAAKAgBAGIIAABAQAAAAQAgAChCAACKEAEAMDAAAAEA
