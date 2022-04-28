@@ -117,6 +117,7 @@
             // 
             // cboEndstation
             // 
+            this.cboEndstation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cboEndstation.FormattingEnabled = true;
             this.cboEndstation.Location = new System.Drawing.Point(319, 54);
             this.cboEndstation.Name = "cboEndstation";
@@ -126,6 +127,7 @@
             // 
             // cboStartstation
             // 
+            this.cboStartstation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cboStartstation.FormattingEnabled = true;
             this.cboStartstation.Location = new System.Drawing.Point(27, 54);
             this.cboStartstation.Name = "cboStartstation";

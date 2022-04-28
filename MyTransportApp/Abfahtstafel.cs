@@ -32,24 +32,23 @@ namespace MyTransportApp
 
         private void cboStation_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Enter)
+            if (char.IsLetterOrDigit((char)e.KeyCode))
             {
+                string searchstation = cboStation.Text;
                 cboStation.Items.Clear();
-                string SearchStation = cboStation.Text;
-                var StationList = transport.GetStations(SearchStation);
-                List<string> list = new List<string>();
-
-                foreach (var Station in StationList.StationList)
-                {
-                    list.Add(Station.Name);
-                }
-
-                foreach (var item in list)
-                {
-                    cboStation.Items.Add(item);
-                }
-                cboStation.DroppedDown = true;
                 cboStation.SelectionStart = cboStation.Text.Length + 1;
+                var Stations = transport.GetStations(searchstation);
+                foreach (Station station in Stations.StationList)
+                {
+                    cboStation.Items.Add(station.Name);
+                }
+
+                if (cboStation.Text.Length >= 2)
+                {
+                    cboStation.DroppedDown = true;
+                    cboStation.Text = searchstation;
+                    cboStation.SelectionStart = cboStation.Text.Length + 1;
+                }
             }
         }
     }

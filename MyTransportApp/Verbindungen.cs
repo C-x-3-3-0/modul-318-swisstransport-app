@@ -47,53 +47,46 @@ namespace MyTransportApp
         private void cboStartstation_KeyUp(object sender, KeyEventArgs e)
         {
             
-            if (e.KeyData == Keys.Enter)
-            {   
-                cboStartstation.Items.Clear();
+            if (char.IsLetterOrDigit((char)e.KeyCode))
+            {
                 string Startstation = cboStartstation.Text;
-                var Stationlist = transport.GetStations(Startstation);
-                List<string> list = new List<string>();
-                foreach (var Station in Stationlist.StationList)
-                {
-                    list.Add(Station.Name);
-                }
-
-                foreach (var item in list)
-                {
-                    cboStartstation.Items.Add(item);
-                }
-                cboStartstation.DroppedDown = true; 
+                cboStartstation.Items.Clear();
                 cboStartstation.SelectionStart = cboStartstation.Text.Length + 1;
+                var Stations = transport.GetStations(Startstation);
+                foreach (Station station in Stations.StationList)
+                {
+                    cboStartstation.Items.Add(station.Name);
+                }
 
-
+                if (cboStartstation.Text.Length >= 2)
+                {
+                    cboStartstation.DroppedDown = true;
+                    cboStartstation.Text = Startstation;
+                    cboStartstation.SelectionStart = cboStartstation.Text.Length + 1;
+                }               
             }
-            //else
-            //{
-            //    while (cboStartstation.Items.Count >= 1)
-            //        cboStartstation.Items.RemoveAt(0);
-            //}
+
         }
 
         private void cboEndstation_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Enter)
+            if (char.IsLetterOrDigit((char)e.KeyCode))
             {
-                cboEndstation.Items.Clear ();
                 string Endstation = cboEndstation.Text;
-                var StationList = transport.GetStations(Endstation);
-                List<string> list = new List<string>();
-
-                foreach (var Station in StationList.StationList)
+                cboEndstation.Items.Clear();
+                cboEndstation.SelectionStart = cboEndstation.Text.Length + 1;
+                var Stations = transport.GetStations(Endstation);
+                foreach (Station station in Stations.StationList)
                 {
-                    list.Add(Station.Name);
+                    cboEndstation.Items.Add(station.Name);
                 }
 
-                foreach (var item in list)
+                if (cboEndstation.Text.Length >= 2)
                 {
-                    cboEndstation.Items.Add (item);
+                    cboEndstation.DroppedDown = true;
+                    cboEndstation.Text = Endstation;
+                    cboEndstation.SelectionStart = cboEndstation.Text.Length + 1;
                 }
-                cboEndstation.DroppedDown= true;
-                cboStartstation.SelectionStart = cboStartstation.Text.Length + 1;
             }
         }
     }

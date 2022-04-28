@@ -33,5 +33,11 @@ namespace MyTransportApp
             Abfahrtstafel.ShowDialog();
             this.Show();
         }
+
+        private void btnStationen_Click(object sender, EventArgs e)
+        {
+            const string message = "Noch im Entwicklung, bald online zu Verfügung";
+            var result = MessageBox.Show(message);
+        }
     }
 }

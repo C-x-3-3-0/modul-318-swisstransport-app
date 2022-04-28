@@ -72,6 +72,7 @@
             this.btnStationen.TabIndex = 8;
             this.btnStationen.Text = "Stationen in meiner Nähe";
             this.btnStationen.UseVisualStyleBackColor = true;
+            this.btnStationen.Click += new System.EventHandler(this.btnStationen_Click);
             // 
             // btnVerbindungen
             // 
