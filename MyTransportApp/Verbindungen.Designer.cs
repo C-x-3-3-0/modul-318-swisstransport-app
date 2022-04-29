@@ -50,6 +50,7 @@
             this.ColumnDirection = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblIcon = new System.Windows.Forms.Label();
             this.picIcon = new System.Windows.Forms.PictureBox();
+            this.lblWarning = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConnectionList)).BeginInit();
@@ -246,11 +247,22 @@
             this.picIcon.TabIndex = 10;
             this.picIcon.TabStop = false;
             // 
+            // lblWarning
+            // 
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblWarning.Location = new System.Drawing.Point(12, 459);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(777, 24);
+            this.lblWarning.TabIndex = 12;
+            this.lblWarning.Text = "BITTE STATION FELDER NICHT LEER LASSEN, DAS FÜHRT ZUM PROGRAMMABSTURZ!!!";
+            // 
             // FormVerbindungen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 714);
+            this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.lblIcon);
             this.Controls.Add(this.picIcon);
             this.Controls.Add(this.dgvConnectionList);
@@ -293,5 +305,6 @@
         private DateTimePicker dtptime;
         private Label lblIcon;
         private PictureBox picIcon;
+        private Label lblWarning;
     }
 }
