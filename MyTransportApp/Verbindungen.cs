@@ -30,6 +30,14 @@ namespace MyTransportApp
         //Funktion von button Suchen 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            if (cboStartstation.Text == "")
+            {
+                MessageBox.Show("Bitte geben sie eine Station ein");
+            }
+            if (cboEndstation.Text == "")
+            {
+                MessageBox.Show("Bitte geben sie eine Station ein");
+            }
             dgvConnectionList.Rows.Clear();
             var List = transport.GetConnections(cboStartstation.Text, cboEndstation.Text, dtpVerbindungen.Value , dtptime.Value);
             foreach (Connection connection in List.ConnectionList)
@@ -37,7 +45,8 @@ namespace MyTransportApp
                 
                 dgvConnectionList.Rows.Add(connection.From.Station.Name, connection.To.Station.Name, connection.From.Departure, connection.To.Arrival, connection.From.Platform, connection.To.Platform, connection.Duration);
             }
-           
+            
+                
         }
         //Funktion von Vorschläge beim Texteingabe beim ersten Suchfeld
         private void cboStartstation_KeyUp(object sender, KeyEventArgs e)
@@ -85,5 +94,7 @@ namespace MyTransportApp
                 }
             }
         }
+
+ 
     }
 }

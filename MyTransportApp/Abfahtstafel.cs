@@ -22,6 +22,12 @@ namespace MyTransportApp
         //Funktionen von button Suchen
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            if (cboStation.Text == "")
+            {
+                MessageBox.Show("Geben sie eine Station ein");
+            }
+            
+            
             dgvConnectionList.Rows.Clear();
             var list = transport.GetStationBoard(cboStation.Text, cboStation.Text);
             foreach (StationBoard connection in list.Entries)
