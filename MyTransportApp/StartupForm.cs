@@ -16,24 +16,24 @@ namespace MyTransportApp
         {
             InitializeComponent();
         }
-
+        //Funktionen von Button Verbindungen 
         private void btnVerbindungen_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form Verbindungen = new FormVerbindungen();
-            Verbindungen.ShowDialog();
+            Form verbindungen = new FormVerbindungen();
+            verbindungen.ShowDialog();
 
             this.Show();
         }
-
+        //Funktionen von Button Abfahrtstafel
         private void btnAbfahrtstafel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form Abfahrtstafel = new FormAbfahtstafel();
-            Abfahrtstafel.ShowDialog();
+            Form abfahrtstafel = new FormAbfahtstafel();
+            abfahrtstafel.ShowDialog();
             this.Show();
         }
-
+        //Funktionen von Button Stationen in meiner Nähe
         private void btnStationen_Click(object sender, EventArgs e)
         {
             const string message = "Noch im Entwicklung, bald online zu Verfügung";

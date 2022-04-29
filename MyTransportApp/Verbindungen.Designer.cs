@@ -38,8 +38,6 @@
             this.cboEndstation = new System.Windows.Forms.ComboBox();
             this.cboStartstation = new System.Windows.Forms.ComboBox();
             this.btnReverse = new System.Windows.Forms.Button();
-            this.lblIcon = new System.Windows.Forms.Label();
-            this.picIcon = new System.Windows.Forms.PictureBox();
             this.dgvConnectionList = new System.Windows.Forms.DataGridView();
             this.ColumnFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,10 +48,12 @@
             this.ColumnDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBusTrainNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDirection = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblIcon = new System.Windows.Forms.Label();
+            this.picIcon = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConnectionList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -120,7 +120,6 @@
             // 
             // cboEndstation
             // 
-            this.cboEndstation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cboEndstation.FormattingEnabled = true;
             this.cboEndstation.Location = new System.Drawing.Point(319, 54);
             this.cboEndstation.Name = "cboEndstation";
@@ -130,7 +129,6 @@
             // 
             // cboStartstation
             // 
-            this.cboStartstation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cboStartstation.FormattingEnabled = true;
             this.cboStartstation.Location = new System.Drawing.Point(27, 54);
             this.cboStartstation.Name = "cboStartstation";
@@ -148,28 +146,6 @@
             this.btnReverse.UseVisualStyleBackColor = true;
             this.btnReverse.Click += new System.EventHandler(this.btnReverse_Click);
             // 
-            // lblIcon
-            // 
-            this.lblIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblIcon.AutoSize = true;
-            this.lblIcon.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblIcon.Location = new System.Drawing.Point(117, 47);
-            this.lblIcon.Name = "lblIcon";
-            this.lblIcon.Size = new System.Drawing.Size(132, 18);
-            this.lblIcon.TabIndex = 8;
-            this.lblIcon.Text = "SwissTransport";
-            // 
-            // picIcon
-            // 
-            this.picIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picIcon.Image = global::MyTransportApp.Properties.Resources.icon_removebg_preview;
-            this.picIcon.Location = new System.Drawing.Point(12, 12);
-            this.picIcon.Name = "picIcon";
-            this.picIcon.Size = new System.Drawing.Size(99, 53);
-            this.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picIcon.TabIndex = 7;
-            this.picIcon.TabStop = false;
-            // 
             // dgvConnectionList
             // 
             this.dgvConnectionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -185,7 +161,7 @@
             this.dgvConnectionList.Name = "dgvConnectionList";
             this.dgvConnectionList.RowHeadersVisible = false;
             this.dgvConnectionList.RowTemplate.Height = 25;
-            this.dgvConnectionList.Size = new System.Drawing.Size(800, 423);
+            this.dgvConnectionList.Size = new System.Drawing.Size(803, 222);
             this.dgvConnectionList.TabIndex = 9;
             // 
             // ColumnFrom
@@ -248,14 +224,36 @@
             this.ColumnDirection.Name = "ColumnDirection";
             this.ColumnDirection.ReadOnly = true;
             // 
+            // lblIcon
+            // 
+            this.lblIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblIcon.AutoSize = true;
+            this.lblIcon.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblIcon.Location = new System.Drawing.Point(117, 33);
+            this.lblIcon.Name = "lblIcon";
+            this.lblIcon.Size = new System.Drawing.Size(132, 18);
+            this.lblIcon.TabIndex = 11;
+            this.lblIcon.Text = "SwissTransport";
+            // 
+            // picIcon
+            // 
+            this.picIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picIcon.Image = global::MyTransportApp.Properties.Resources.icon_removebg_preview;
+            this.picIcon.Location = new System.Drawing.Point(12, -2);
+            this.picIcon.Name = "picIcon";
+            this.picIcon.Size = new System.Drawing.Size(99, 53);
+            this.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picIcon.TabIndex = 10;
+            this.picIcon.TabStop = false;
+            // 
             // FormVerbindungen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 917);
-            this.Controls.Add(this.dgvConnectionList);
+            this.ClientSize = new System.Drawing.Size(800, 714);
             this.Controls.Add(this.lblIcon);
             this.Controls.Add(this.picIcon);
+            this.Controls.Add(this.dgvConnectionList);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -263,11 +261,10 @@
             this.MaximizeBox = false;
             this.Name = "FormVerbindungen";
             this.Text = "Verbindungen";
-            this.Load += new System.EventHandler(this.FormVerbindungen_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConnectionList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,8 +277,6 @@
         private DateTimePicker dtpVerbindungen;
         private Panel panel2;
         private Button btnReverse;
-        private Label lblIcon;
-        private PictureBox picIcon;
         private DataGridView dgvConnectionList;
         private DataGridViewTextBoxColumn ColumnBusTrainNumber;
         private DataGridViewTextBoxColumn ColumnDirection;
@@ -296,5 +291,7 @@
         private ComboBox cboEndstation;
         private ComboBox cboStartstation;
         private DateTimePicker dtptime;
+        private Label lblIcon;
+        private PictureBox picIcon;
     }
 }

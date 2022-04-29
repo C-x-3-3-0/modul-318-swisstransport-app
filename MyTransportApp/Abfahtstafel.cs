@@ -19,17 +19,17 @@ namespace MyTransportApp
         {
             InitializeComponent();
         }
-
+        //Funktionen von button Suchen
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dgvConnectionList.Rows.Clear();
-            var List = transport.GetStationBoard(cboStation.Text, cboStation.Text);
-            foreach (StationBoard connection in List.Entries)
+            var list = transport.GetStationBoard(cboStation.Text, cboStation.Text);
+            foreach (StationBoard connection in list.Entries)
             {
-                dgvConnectionList.Rows.Add(List.Station.Name, connection.To, connection.Stop.Departure);
+                dgvConnectionList.Rows.Add(list.Station.Name, connection.To, connection.Stop.Departure);
             }
         }
-
+        //Funktion von Vorschläge biem Eingabe 
         private void cboStation_KeyUp(object sender, KeyEventArgs e)
         {
             if (char.IsLetterOrDigit((char)e.KeyCode))
@@ -37,8 +37,8 @@ namespace MyTransportApp
                 string searchstation = cboStation.Text;
                 cboStation.Items.Clear();
                 cboStation.SelectionStart = cboStation.Text.Length + 1;
-                var Stations = transport.GetStations(searchstation);
-                foreach (Station station in Stations.StationList)
+                var stations = transport.GetStations(searchstation);
+                foreach (Station station in stations.StationList)
                 {
                     cboStation.Items.Add(station.Name);
                 }

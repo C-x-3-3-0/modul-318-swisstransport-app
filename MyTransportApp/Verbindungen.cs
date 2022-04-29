@@ -14,24 +14,20 @@ namespace MyTransportApp
 {
     public partial class FormVerbindungen : Form
     {
+        //Verbindung von ITransport
         ITransport transport = new Transport();
         public FormVerbindungen()
         {
             InitializeComponent();
         }
-
-        private void FormVerbindungen_Load(object sender, EventArgs e)
-        {
-           
-
-        }
+        //Funktion von button Reverse
         private void btnReverse_Click(object sender, EventArgs e)
         {
-            string Station1 = cboStartstation.Text;
+            string station1 = cboStartstation.Text;
             cboStartstation.Text = cboEndstation.Text;
-            cboEndstation.Text = Station1;
+            cboEndstation.Text = station1;
         }
-
+        //Funktion von button Suchen 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dgvConnectionList.Rows.Clear();
@@ -43,17 +39,17 @@ namespace MyTransportApp
             }
            
         }
-
+        //Funktion von Vorschläge beim Texteingabe beim ersten Suchfeld
         private void cboStartstation_KeyUp(object sender, KeyEventArgs e)
         {
             
             if (char.IsLetterOrDigit((char)e.KeyCode))
             {
-                string Startstation = cboStartstation.Text;
+                string startstation = cboStartstation.Text;
                 cboStartstation.Items.Clear();
                 cboStartstation.SelectionStart = cboStartstation.Text.Length + 1;
-                var Stations = transport.GetStations(Startstation);
-                foreach (Station station in Stations.StationList)
+                var stations = transport.GetStations(startstation);
+                foreach (Station station in stations.StationList)
                 {
                     cboStartstation.Items.Add(station.Name);
                 }
@@ -61,22 +57,22 @@ namespace MyTransportApp
                 if (cboStartstation.Text.Length >= 2)
                 {
                     cboStartstation.DroppedDown = true;
-                    cboStartstation.Text = Startstation;
+                    cboStartstation.Text = startstation;
                     cboStartstation.SelectionStart = cboStartstation.Text.Length + 1;
                 }               
             }
 
         }
-
+        //Funktion von Vorschläge beim Texteingabe beim zweiten Suchfeld
         private void cboEndstation_KeyUp(object sender, KeyEventArgs e)
         {
             if (char.IsLetterOrDigit((char)e.KeyCode))
             {
-                string Endstation = cboEndstation.Text;
+                string endstation = cboEndstation.Text;
                 cboEndstation.Items.Clear();
                 cboEndstation.SelectionStart = cboEndstation.Text.Length + 1;
-                var Stations = transport.GetStations(Endstation);
-                foreach (Station station in Stations.StationList)
+                var stations = transport.GetStations(endstation);
+                foreach (Station station in stations.StationList)
                 {
                     cboEndstation.Items.Add(station.Name);
                 }
@@ -84,7 +80,7 @@ namespace MyTransportApp
                 if (cboEndstation.Text.Length >= 2)
                 {
                     cboEndstation.DroppedDown = true;
-                    cboEndstation.Text = Endstation;
+                    cboEndstation.Text = endstation;
                     cboEndstation.SelectionStart = cboEndstation.Text.Length + 1;
                 }
             }
