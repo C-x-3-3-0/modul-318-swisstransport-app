@@ -39,7 +39,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblIcon = new System.Windows.Forms.Label();
             this.picIcon = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblWarning = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConnectionList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
@@ -48,7 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblWarning);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.dgvConnectionList);
             this.panel1.Controls.Add(this.cboStation);
@@ -146,16 +146,15 @@
             this.picIcon.TabIndex = 9;
             this.picIcon.TabStop = false;
             // 
-            // label1
+            // lblWarning
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(97, 136);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(603, 22);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "BITTE KEINE LEERE ANGABEN BEI STATIONEN, DAS FÜHRT ZUM PROGRAMMABSTURZ";
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblWarning.Location = new System.Drawing.Point(11, 132);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(777, 24);
+            this.lblWarning.TabIndex = 16;
+            this.lblWarning.Text = "BITTE STATION FELDER NICHT LEER LASSEN, DAS FÜHRT ZUM PROGRAMMABSTURZ!!!";
             // 
             // FormAbfahtstafel
             // 
@@ -188,6 +187,6 @@
         private DataGridViewTextBoxColumn ColumnFrom;
         private DataGridViewTextBoxColumn ColumnTo;
         private DataGridViewTextBoxColumn ColumnDeparture;
-        private Label label1;
+        private Label lblWarning;
     }
 }
